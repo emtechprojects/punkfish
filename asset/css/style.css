@@ -13,6 +13,11 @@ body {
     font-size: 22px;
     animation: intro 600ms ease-in-out 0 1 normal forwards;
     scroll-behavior: smooth;
+    background: #fff;
+}
+
+a {
+    text-decoration: none;
 }
 
 @keyframes intro {
@@ -48,15 +53,12 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../images/meals3.jpeg');
     min-height: 400px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    position: relative;
 }
 
 .parallax p{
+    position: relative;
     padding: 5px 10px;
     color: white;
     font-size: 33px;
@@ -65,6 +67,18 @@ nav {
     border: 2px double black;
     border-radius: 5px;
 
+}
+
+.parallax::before {
+    content: "";
+    background-image: url('../images/meals3.jpeg');
+    position: fixed;
+    height: 400px;
+    width: 100vw;
+    z-index: -1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .punk-heading {
@@ -92,7 +106,7 @@ section {}
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    border: 3px solid red;
+    background: #dedede;
 }
 .gallery-item{
     margin: 10px auto;
@@ -105,26 +119,46 @@ section {}
     border-radius: 5px;
 }
 
-.menu {}
+.section-heading,
+.contacts-wrapper,
+.gallery-wrapper,
+.about-us,
+.menu {
+    padding: 5%;
+    background: #fff;
+}
+
+.menu-inner {
+    width: 80%;
+    margin: auto;
+    padding: 10px 20px;
+    box-shadow: 0px 0px 1px black;
+}
 
 .section-heading {
     width: auto;
-    margin: 2% auto;
+    padding: 10px;
     text-align: center;
 }
 
 .starters,
 .mains,
 .sides,
-.drinks {
-    
+.drinks,
+.fishes {
+    width: 90%;
+    margin: auto;
 }
 
 .starter,
 .main,
 .side,
-.drink {
+.drink,
+.fish {
+    padding: 5px 0;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .starter-img,
@@ -133,19 +167,25 @@ section {}
 .fish-img {
     width: 50px;
     height: 50px;
+    border: 2px double silver;
+    border-radius: 50%;
 }
 
 .starter-body,
 .main-body,
 .side-body,
 .drink-body,
-.fish-body {}
+.fish-body {
+    width: 90%;
+    margin: 0 2px;
+    text-align: center;
+}
 
 .starter-name,
 .main-name,
 .side-name,
 .drink-name,
-.fish--name {}
+.fish-name {}
 
 .starter-price,
 .main-price,
@@ -154,12 +194,12 @@ section {}
 .fish-price {}
 
 .about-us {
-    opacity: 70%;
+    width: 100%;
+    min-height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-image: url('../images/crop2.png');
-    min-height: 400px;
     background-attachment: fixed;
     background-position: top;
     background-repeat: no-repeat;
@@ -167,8 +207,7 @@ section {}
 
 .about-body {
     width: 80%;
-    margin: 10% auto;
-    padding: 5px 10px;
+    margin:auto;
     color: white;
     font-size: 1.5em;
     text-shadow: 0px 0px 3px black;
@@ -178,16 +217,53 @@ section {}
     border-radius: 5px;
 }
 
+.contacts {
+    width: 80%;
+    margin: 5% auto;
+    margin-top: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
 .contact {}
+
+.phone,
+.email,
+.address {
+    margin: 10px 5px;
+}
+.phone p,
+.email p,
+.address p{
+    margin: 5px 0;
+}
+.phone a,
+.email a,
+.address a{
+    margin: 5px;
+    text-decoration: none;
+}
+.phone a:hover,
+.email a:hover,
+.address a:hover{
+    cursor: pointer;
+    color: rgb(68, 27, 149);
+}
 
 iframe {
     width: 240px;
     height: 160px;
+    margin: 10%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px black;
 }
 
 .chefy {
     margin: 5px 0;
     margin-left: 60%;
+}
+
+footer {
+    text-align: center;
 }
 
 @media only screen and (max-width:800px) {
@@ -198,6 +274,11 @@ iframe {
 @media only screen and (max-width:630px) {
     .chefy {
         margin-left: 35%;
+    }
+    .contacts {
+        width: 60%;
+        flex-direction: column;
+        
     }
 }
 @media only screen and (max-width:466px) {
