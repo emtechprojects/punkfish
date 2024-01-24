@@ -171,7 +171,7 @@ section {}
 .side,
 .drink,
 .fish {
-    padding: 5px 0;
+    padding: 10px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -190,18 +190,16 @@ section {}
 .starter-body,
 .main-body,
 .side-body,
-.drink-body,
+.drink,
 .fish-body {
     width: 90%;
     margin: 0 2px;
     text-align: center;
 }
 
-.starter-name,
-.main-name,
-.side-name,
-.drink-name,
-.fish-name {}
+.drink-name {
+    padding-right: 10px;
+}
 
 .starter-price,
 .main-price,
