@@ -125,8 +125,13 @@ section {}
 .gallery-img {
     width: 200px;
     height: auto;
+    margin: auto;
     border: 3px double black;
     border-radius: 5px;
+}
+
+.gallery-img:active {
+    width: 100%;
 }
 
 .main,
