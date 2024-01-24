@@ -60,8 +60,10 @@ nav {
 .parallax p{
     position: relative;
     padding: 5px 10px;
+    margin: 0 5px;
     color: white;
-    font-size: 33px;
+    font-size: 1.8em;
+    text-align: center;
     text-shadow: 0px 0px 3px black;
     background-color: rgba(171, 171, 171, 0.533);
     border: 2px double black;
@@ -84,7 +86,7 @@ nav {
 .punk-heading {
     color: black;
     font-family: monospace;
-    font-size: 50px;
+    font-size: 1.6em;
     text-shadow: 0px 0px 3px white;
     font-weight: 800;
     filter: drop-shadow(0px 0px wite);
@@ -95,13 +97,16 @@ nav {
 }
 
 main {
+    height: 100%;
+    margin-bottom: -20px;
 }
 
 section {}
 
 .gallery {
-    width: 80%;
+    width: 85%;
     margin: auto;
+    padding: 5px 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -119,13 +124,15 @@ section {}
     border-radius: 5px;
 }
 
+.main,
 .section-heading,
 .contacts-wrapper,
 .gallery-wrapper,
 .about-us,
-.menu {
+.menu,
+.footer {
     padding: 5%;
-    background: #fff;
+    /* background: #fff; */
 }
 
 .menu-inner {
@@ -194,6 +201,7 @@ section {}
 .fish-price {}
 
 .about-us {
+    opacity: 60%;
     width: 100%;
     min-height: 400px;
     display: flex;
@@ -272,26 +280,28 @@ footer {
     }
 }
 @media only screen and (max-width:630px) {
-    .chefy {
-        margin-left: 35%;
+    body {
+        font-size: 16px;
     }
+
     .contacts {
         width: 60%;
+        text-align: center;
         flex-direction: column;
-        
+    }
+    iframe {
+        width: 100%;
     }
 }
 @media only screen and (max-width:466px) {
     .chefy {
-        margin-left: 10%;
+        margin-left: 40%;
     }
-    .shell-cove {
-        
-    }
+    
 }
-@media only screen and (max-width:300px) {
+@media only screen and (max-width:360px) {
     body {
-        font-size: 16px;
+        font-size: 14px;
     }
     .shell-cove {
     margin-left: 30%;
